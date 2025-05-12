@@ -31,6 +31,16 @@
             bindings = <&bt BT_SEL 1>;
             key-positions = <0 4>;
         };
+
+        smile {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <11 10>;
+        };
+
+        not_smile {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <11 9>;
+        };
     };
 
     keymap {
