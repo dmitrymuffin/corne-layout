@@ -5,43 +5,10 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        EVE_LAYER {
-            bindings = <&to 3>;
-            key-positions = <37 40>;
-        };
-
-        BT_CLEAR {
-            bindings = <&bt BT_CLR>;
-            key-positions = <0 11>;
-        };
-
-        BT_PROFILE_0 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <0 5>;
-        };
-
-        BT_PROFILE_1 {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <0 4>;
-        };
-
-        smile {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <11 10>;
-        };
-
-        not_smile {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <11 9>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -69,10 +36,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans  &trans  &kp PG_UP  &kp UP    &kp PG_DN    &kp N7  &kp N8  &kp N9  &kp PLUS   &kp MINUS  &kp BSPC
-&trans  &trans  &trans  &kp LEFT   &kp DOWN  &kp RIGHT    &kp N4  &kp N5  &kp N6  &kp STAR   &kp FSLH   &kp DEL
-&trans  &trans  &trans  &trans     &trans    &trans       &kp N1  &kp N2  &kp N3  &kp EQUAL  &kp COMMA  &kp ESC
-                        &trans     &trans    &trans       &trans  &trans  &kp N0
+&kp N1            &kp N2     &kp N3  &kp N4     &kp N5     &kp N6     &kp N7  &kp N8  &kp N9  &kp PLUS   &kp MINUS  &kp BSPC
+&kp EXCLAMATION   &kp A      &kp B   &kp C      &kp D      &kp F      &kp N4  &kp N5  &kp N6  &kp STAR   &kp FSLH   &trans
+&kp GREATER_THAN  &kp SPACE  &trans  &kp RC(C)  &kp RC(V)  &kp ESC    &kp N1  &kp N2  &kp N3  &kp EQUAL  &kp COMMA  &trans
+                                     &trans     &kp ENTER  &trans     &trans  &trans  &kp N0
             >;
         };
 
@@ -84,37 +51,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&trans  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
-                          &trans    &trans    &trans       &trans     &trans     &trans
-            >;
-        };
-
-        EVE {
-            bindings = <
-&kp RA(N1)  &kp RA(N4)  &kp F1  &kp F2    &kp F3     &kp F4     &kp Y  &kp U   &kp I               &kp O    &kp P     &kp FSLH
-&kp RA(N2)  &kp RA(N5)  &kp F5  &kp F6    &kp F7     &kp F8     &kp H  &kp J   &kp K               &kp L    &kp SEMI  &kp SQT
-&kp RA(N3)  &kp RA(N6)  &kp F9  &kp F10   &kp F11    &kp F12    &kp N  &kp M   &kp COMMA           &kp DOT  &kp FSLH  &kp ESC
-                                &kp LALT  &kp LCTRL  &mo 4      &to 0  &trans  &kp LA(LEFT_SHIFT)
-            >;
-        };
-
-        OVERHEAT {
-            bindings = <
-&mo 5                &kp INTERNATIONAL_1  &kp F13  &kp F14  &kp F15  &kp F16    &trans  &trans  &trans  &trans  &trans  &trans
-&kp INTERNATIONAL_4  &kp INT2             &kp F17  &kp F18  &kp F19  &kp F20    &trans  &trans  &trans  &trans  &trans  &trans
-&kp INTERNATIONAL_5  &kp INTERNATIONAL_3  &kp F21  &kp F22  &kp F23  &kp F24    &trans  &trans  &trans  &trans  &trans  &trans
-                                                   &trans   &trans   &trans     &trans  &trans  &trans
-            >;
-        };
-
-        other {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK         &kp LPAR  &kp RPAR  &kp BSPC
+&trans  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT          &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC          &kp RBRC  &kp PIPE  &trans
+                          &trans    &trans    &trans       &trans     &trans     &kp LS(LEFT_ALT)
             >;
         };
     };
