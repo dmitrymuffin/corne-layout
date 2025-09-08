@@ -14,12 +14,32 @@
 
         tabu {
             bindings = <&kp TAB>;
-            key-positions = <38 0 1>;
+            key-positions = <0 1 38>;
         };
 
-        BTRESET {
+        btnxt {
+            bindings = <&bt BT_NXT>;
+            key-positions = <11 39 38>;
+        };
+
+        btprv {
+            bindings = <&bt BT_PRV>;
+            key-positions = <10 38 39>;
+        };
+
+        btsel {
+            bindings = <&none>;
+            key-positions = <23 38 39>;
+        };
+
+        btclr {
             bindings = <&bt BT_CLR>;
-            key-positions = <11 39>;
+            key-positions = <22 39 38>;
+        };
+
+        alttab {
+            bindings = <&kp RA(TAB)>;
+            key-positions = <6 39>;
         };
     };
 
