@@ -70,7 +70,7 @@
             bindings = <
 &kp LBKT   &kp RBKT  &kp F1  &kp F2   &kp F3   &kp F4     &kp LEFT_ALT  &kp TAB  &trans  &trans  &bt BT_CLR      &bt BT_NXT
 &kp SEMI   &kp APOS  &kp F5  &kp F6   &kp F7   &kp F8     &trans        &trans   &trans  &trans  &trans          &trans
-&kp COMMA  &kp DOT   &kp F9  &kp F10  &kp F11  &kp F12    &trans        &trans   &trans  &trans  &kt LC(DELETE)  &kt LA(F4)
+&kp COMMA  &kp DOT   &kp F9  &kp F10  &kp F11  &kp F12    &bootloader   &trans   &trans  &trans  &kt LC(DELETE)  &kt LA(F4)
                              &trans   &trans   &trans     &trans        &trans   &trans
             >;
         };
